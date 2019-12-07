@@ -39,7 +39,7 @@
                     <img src="<?= base_url(); ?>assets/images/user.png" width="30" height="30" alt="">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">Login</a>
+                    <a class="dropdown-item" data-toggle="modal" data-target="#modalLogin">Login</a>
                 </div>
             </div>
         </div>
