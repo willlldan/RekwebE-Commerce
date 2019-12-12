@@ -7,7 +7,19 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function() {
+  // Transition effect for navbar 
+  $(window).scroll(function() {
+    // checks if window is scrolled more than 500px, adds/removes solid class
+    if($(this).scrollTop() > 200) { 
+        $('.navbar').removeClass('bg-transparent');
+        $('.navbar').addClass('bg-dark');
 
+    } else {
+        $('.navbar').addClass('bg-transparent');
+    }
+  });
+});
 
 
 // Quantity Box
