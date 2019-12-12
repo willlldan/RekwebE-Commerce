@@ -8,6 +8,8 @@ $(document).ready(function(){
 });
 
 
+
+
 // Quantity Box
 jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
 jQuery('.quantity').each(function() {

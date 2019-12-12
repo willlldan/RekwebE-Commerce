@@ -61,20 +61,19 @@ Indonesia</p>
   <script src="<?= base_url(); ?>assets/js/sb-admin-2.min.js"></script>
 
   <script>
-      $(document).ready(function() {
-        // Transition effect for navbar 
-        $(window).scroll(function() {
-          // checks if window is scrolled more than 500px, adds/removes solid class
-          if($(this).scrollTop() > 200) { 
-              $('.navbar').removeClass('bg-transparent');
-              $('.navbar').addClass('bg-dark');
+  $(document).ready(function() {
+  // Transition effect for navbar 
+  $(window).scroll(function() {
+    // checks if window is scrolled more than 500px, adds/removes solid class
+    if($(this).scrollTop() > 200) { 
+        $('.navbar').removeClass('bg-transparent');
+        $('.navbar').addClass('bg-dark');
 
-          } else {
-              $('.navbar').addClass('bg-transparent');
-          }
-        });
+    } else {
+        $('.navbar').addClass('bg-transparent');
+    }
+  });
 });
-
   </script>
   </body>
 </html>
