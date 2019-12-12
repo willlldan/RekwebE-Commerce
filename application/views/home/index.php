@@ -6,21 +6,28 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<?= base_url();  ?>assets/images/Aimer Blanc et Noir.png" class="d-block w-100" alt="">
+      <img src="<?= base_url();  ?>assets/images/bg1.jpeg" class="d-block w-100" alt="">
       <div class="carousel-caption d-none d-md-block">
         <h5>Best Choice</h5>
         <p>Prasent For your couple.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="<?= base_url();  ?>assets/images/Aimer Stand Alone.png" class="d-block w-100" alt="">
+      <img src="<?= base_url();  ?>assets/images/bg2.jpeg" class="d-block w-100" alt="">
       <div class="carousel-caption d-none d-md-block">
         <h5>Best Choice</h5>
         <p>Prasent For your couple.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="<?= base_url();  ?>assets/images/1506269116_Karambit - Night (L) Edited.jpg" class="d-block w-100" alt="">
+      <img src="<?= base_url();  ?>assets/images/bg3.jpeg" class="d-block w-100" alt="">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Best Choice</h5>
+        <p>Prasent For your couple.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="<?= base_url();  ?>assets/images/bg4.jpeg" class="d-block w-100" alt="">
       <div class="carousel-caption d-none d-md-block">
         <h5>Best Choice</h5>
         <p>Prasent For your couple.</p>
@@ -180,10 +187,11 @@
 
 <!-- Tampilan Daftar Barang -->
 <div class="container">
+   <strong>New Arrival</strong>
 <div class="row row-cols-1 row-cols-md-3">
   <a href="" class="col mb-4">
     <div class="card h-100">
-      <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
+      <img src="assets/images/france-art.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -193,7 +201,7 @@
 
   <a href="" class="col mb-4">
     <div class="card h-100">
-      <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
+      <img src="assets/images/france-art.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a short card.</p>
@@ -203,7 +211,7 @@
 
   <a href="" class="col mb-4">
     <div class="card h-100">
-      <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
+      <img src="assets/images/proffesional cuddler.jpg" class="card-img-top" alt="..." style="width: 100%;">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -213,7 +221,7 @@
 
   <a href="" class="col mb-4">
     <div class="card h-100">
-      <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
+      <img src="assets/images/proffesional cuddler.jpg" class="card-img-top " alt="..." style="width: 100%;">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
