@@ -39,6 +39,17 @@
     width:          1px;       
 }
 
+.label {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
 /* Footer */
 .footer {
     background: #3d3d3d;
