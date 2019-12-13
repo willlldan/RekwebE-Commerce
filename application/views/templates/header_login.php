@@ -20,22 +20,22 @@
 </head>
 
 <body>
-    <nav class="fixed-top navbar navbar-expand-lg navbar-dark "  >
+    <nav class="fixed-top navbar navbar-expand-lg navbar-dark ">
         <div class="container ">
-            <a class="navbar-brand" href="<?= base_url(); ?>">BECAUSEØMAT</a>
+            <a class="navbar-brand" href="<?= base_url(); ?>home_login">BECAUSEØMAT</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse pb-sm-0" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link mr-3 " href="<?= base_url(); ?>">Home</a>
+                    <a class="nav-item nav-link mr-3 " href="<?= base_url(); ?>home_login">Home</a>
                     <a class="nav-item nav-link mr-3" href="<?= base_url(); ?>shop">Shop</a>
                     <a class="nav-item nav-link mr-3" href="<?= base_url(); ?>service">Customer Service</a>
                 </div>
             </div>
             <div class="mr-5">
                 <a class="text-decoration-none text-light" href="<?= base_url(); ?>chart">
-                   <h4><i class="fas fa-shopping-cart"></i></h4> 
+                    <h4><i class="fas fa-shopping-cart"></i></h4>
                 </a>
             </div>
             <div class="dropdown mr-5">
@@ -43,52 +43,16 @@
                     <h4><i class="far fa-user-circle"></i></h4>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a href="#modalLogin" class="dropdown-item" data-toggle="modal" >Login</a>
+                    <div class="card-header">
+                        <img src="" alt="">
+                        <strong>
+                            Nama Pelanggan
+                        </strong>
+                    </div>
+                    <a href="<?= base_url(); ?>myaccount" class="dropdown-item" data-toggle="">My Account</a>
+                    <a href="" class="dropdown-item" data-toggle="">Address Book</a>
+                    <a href="<?= base_url(); ?>" class="dropdown-item" data-toggle="">Logout</a>
                 </div>
             </div>
         </div>
     </nav>
-
-    <!-- modal pup up -->
-
-
-<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h5 class="modal-title  w-100 font-weight-bold" id="exampleModalLabel">Form Login</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form class="user">
-          <div class="form-group">
-            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <div class="custom-control custom-checkbox small">
-              <input type="checkbox" class="custom-control-input" id="customCheck">
-              <label class="custom-control-label" for="customCheck">Remember Me</label>
-            </div>
-          </div>
-          <a href="" class="btn btn-primary btn-user btn-block">
-            Login
-          </a>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <div class="text-center">
-          <a class="small" href="forgot-password.html">Forgot Password?</a>
-        </div>
-        <div class="text-center">
-          <a href="#modalRegister" class="small" data-toggle="modal">Create an Account!</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end modal pop up -->
