@@ -11,11 +11,12 @@
                 <input type="text" aria-label="Last name" class="form-control">
             </div>
             <span class="label">E-Mail</span>
-            <br>
-            <p class="content">cs@becauseomat.com</p>
+            <strong class="content">cs@becauseomat.com</strong>
             <br> 
-            <button type="button" class="btn btn-danger">Don't Save</button>
-            <button type="button" class="btn btn-success">Save</button>
+            <div class="content">
+                <button type="button" class="btn btn-danger">Cancel</button>
+                <button type="button" class="btn btn-success">Save</button>
+            </div>
         </div>
     </div>
 </div>
