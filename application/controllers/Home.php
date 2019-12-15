@@ -1,7 +1,7 @@
 <?php
 class Home extends CI_Controller
 {
-    public function index($nama = '')
+    public function index()
     {
         $data['judul'] = 'Home';
         $data['nama'] = $nama;
@@ -10,4 +10,3 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 }
-?>
