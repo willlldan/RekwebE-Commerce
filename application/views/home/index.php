@@ -71,7 +71,7 @@
       </div>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
       <p>
-        <a class="btn btn-info" href="<?= base_url(); ?>detail" role="button">View Detail</a>
+        <a class="btn btn-info" href="<?= base_url('home/detail'); ?>" role="button">View Detail</a>
       </p>
     </div>
 
@@ -82,7 +82,7 @@
       </div>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
       <p>
-        <a class="btn btn-info" href="<?= base_url(); ?>detail" role="button">View Detail</a>
+        <a class="btn btn-info" href="<?= base_url('home/detail'); ?>" role="button">View Detail</a>
       </p>
     </div>
 
@@ -93,7 +93,7 @@
       </div>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aspernatur magnam nobis inventore unde quis harum fuga quasi officiis, beatae ducimus illo, laborum perferendis alias ipsa. Aliquam pariatur rerum officia.</p>
       <p>
-        <a class="btn btn-info" href="<?= base_url(); ?>detail" role="button">View Detail</a>
+        <a class="btn btn-info" href="<?= base_url('home/detail'); ?>" role="button">View Detail</a>
       </p>
     </div>
 
@@ -106,17 +106,19 @@
 <div class="container">
   <strong>New Arrival</strong>
   <div class="row row-cols-1 row-cols-md-3">
-    <a href="" class="col mb-4">
-      <div class="card h-100">
-        <img src="assets/images/france-art.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </a>
 
-    <a href="" class="col mb-4">
+    <?php foreach ($barang as $brg) : ?>
+      <a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang']; ?>" class="col mb-4">
+        <div class="card h-100">
+          <img src="assets/images/<?= $brg['gambar']; ?>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><?= $brg['nama_barang']; ?></h5>
+            <p class="card-text"><?= $brg['deskripsi'];  ?></p>
+          </div>
+        </div>
+      </a>
+    <?php endforeach; ?>
+    <!-- <a href="" class="col mb-4">
       <div class="card h-100">
         <img src="assets/images/france-art.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -144,6 +146,6 @@
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
       </div>
-    </a>
+    </a> -->
   </div>
 </div>
