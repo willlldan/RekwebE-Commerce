@@ -6,4 +6,9 @@ class Home_model extends CI_model
     {
         return $this->db->get('barang')->result_array();
     }
+
+    public function getBarangById($id)
+    {
+        return $this->db->get_where('barang', ['id_barang' => $id])->row_array();
+    }
 }

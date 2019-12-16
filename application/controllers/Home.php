@@ -17,9 +17,10 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function detail()
+    public function detail($id)
     {
         $data['judul'] = 'Detail Barang';
+        $data['barang'] = $this->Home_model->getBarangById($id);
         $this->load->view('templates/header', $data);
         $this->load->view('home/detail', $data);
         $this->load->view('templates/footer');

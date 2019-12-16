@@ -108,7 +108,7 @@
   <div class="row row-cols-1 row-cols-md-3">
 
     <?php foreach ($barang as $brg) : ?>
-      <a href="" class="col mb-4">
+      <a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang']; ?>" class="col mb-4">
         <div class="card h-100">
           <img src="assets/images/<?= $brg['gambar']; ?>" class="card-img-top" alt="...">
           <div class="card-body">
