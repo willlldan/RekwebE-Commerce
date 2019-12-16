@@ -107,45 +107,20 @@
   <strong>New Arrival</strong>
   <div class="row row-cols-1 row-cols-md-3">
 
+    <?php $i = 0 ?>
     <?php foreach ($barang as $brg) : ?>
-      <a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang']; ?>" class="col mb-4">
-        <div class="card h-100">
-          <img src="assets/images/<?= $brg['gambar']; ?>" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"><?= $brg['nama_barang']; ?></h5>
-            <p class="card-text"><?= $brg['deskripsi'];  ?></p>
+      <?php if ($i < 4) : ?>
+        <a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang']; ?>" class="col mb-4">
+          <div class="card h-100">
+            <img src="assets/images/<?= $brg['gambar']; ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><?= $brg['nama_barang']; ?></h5>
+              <p class="card-text"><?= $brg['deskripsi'];  ?></p>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+        <?php ++$i; ?>
+      <?php endif; ?>
     <?php endforeach; ?>
-    <!-- <a href="" class="col mb-4">
-      <div class="card h-100">
-        <img src="assets/images/france-art.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a short card.</p>
-        </div>
-      </div>
-    </a>
-
-    <a href="" class="col mb-4">
-      <div class="card h-100">
-        <img src="assets/images/proffesional cuddler.jpg" class="card-img-top" alt="..." style="width: 100%;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-    </a>
-
-    <a href="" class="col mb-4">
-      <div class="card h-100">
-        <img src="assets/images/proffesional cuddler.jpg" class="card-img-top " alt="..." style="width: 100%;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </a> -->
   </div>
 </div>
