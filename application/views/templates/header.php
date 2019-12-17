@@ -85,7 +85,7 @@
             <a class="small" href="forgot-password.html">Forgot Password?</a>
           </div>
           <div class="text-center">
-            <a href="#modalRegister" class="small" data-toggle="modal">Create an Account!</a>
+            <a href="#modalRegister" class="small" data-toggle="modal" data-dismiss="modal">Create an Account!</a>
           </div>
         </div>
       </div>
@@ -104,9 +104,10 @@
           </button>
         </div>
         <div class="modal-body">
-          <form class="user" method="post" action="<?= base_url('home/index'); ?>">
+          <form class="user" method="post" action="<?= base_url('auth/registration'); ?>">
             <div class="form-group">
               <input type="text" class="form-control form-control-user" name="name" id="name" placeholder="Full Name">
+              
             </div>
             <div class="form-group">
               <input type="text" class="form-control form-control-user" name="email" id="email" placeholder="Email Address">
@@ -122,7 +123,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary btn-user btn-block">
+          <button type="submit" class="btn btn-primary btn-user btn-block" >
             Register Account
           </button>
         </div>
