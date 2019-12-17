@@ -1,4 +1,4 @@
-.transparant{
+.bg-transparant{
     opacity: 0.8;
 }
 
@@ -19,6 +19,10 @@
   margin-left: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .justify {
   text-align: justify;
 }
@@ -37,6 +41,17 @@
     border-left:    1px solid hsla(200, 10%, 50%,100);
     height:         100vh;
     width:          1px;       
+}
+
+.label {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  font-size: 18px;
+  margin-bottom: 16px;
 }
 
 /* Footer */

@@ -1,5 +1,11 @@
+<div class="jumbotron jumbotron-fluid" style="background-color: ;">
+  <div class="container">
+    <h1 class="display-4">Shopping Cart</h1>
+    <p>BECAUSEOMAT</p>
+  </div>
+</div>
 <div class="container">
-  <table class="table">
+  <table class="table mt-11">
     <thead>
       <tr>
         <th scope="col">Barang</th>
@@ -36,7 +42,7 @@
         <td><strong>Jumlah</strong></td>
         <td>Rp. 9000</td>
         <td></td>
-        <td><button type="button" class="btn btn-info">Bayar</button></td>
+        <td><a class="btn btn-success " href="<?= base_url(); ?>checkout">Checkout</a></td>
       </tr>
     </tbody>
   </table>
