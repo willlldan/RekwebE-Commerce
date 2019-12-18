@@ -55,12 +55,12 @@ class Barang extends CI_Controller
         }
     }
 
-    // public function hapus($id_barang)
-    // {
-    //     $this->Barang_model->hapusDataBarang($id_barang);
-    //     $this->session->set_flashdata('flash', 'Dihapus');
-    //     redirect('barang');
-    // }
+    public function hapus($id_barang)
+    {
+        $this->Barang_model->hapusDataBarang($id_barang);
+        $this->session->set_flashdata('flash', 'Dihapus');
+        redirect('barang');
+    }
 
     public function detail($id_barang)
     {
