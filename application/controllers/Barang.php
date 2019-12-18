@@ -16,9 +16,9 @@ class Barang extends CI_Controller
         if ($this->input->post('keyword')) {
             $data['barang'] = $this->Barang_model->cariDataBarang();
         }
-        $this->load->view('templates/header', $data);
+        $this->load->view('templates/header_admin', $data);
         $this->load->view('barang/index', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer_admin');
     }
 
     public function tambah()
@@ -31,9 +31,9 @@ class Barang extends CI_Controller
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
 
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('templates/header', $data);
+            $this->load->view('templates/header_admin', $data);
             $this->load->view('barang/tambah');
-            $this->load->view('templates/footer');
+            $this->load->view('templates/footer_admin');
         } else {
             $config['upload_path'] = './assets/img/';
             $config['allowed_types'] = 'jpg|png|jpeg|gif';
@@ -65,9 +65,9 @@ class Barang extends CI_Controller
     {
         $data['judul'] = 'Detail Data barang';
         $data['barang'] = $this->Barang_model->getBarangById($id_barang);
-        $this->load->view('templates/header', $data);
+        $this->load->view('templates/header_admin', $data);
         $this->load->view('barang/detail');
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer_admin');
     }
 
     public function ubah($id_barang)
@@ -81,9 +81,9 @@ class Barang extends CI_Controller
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
 
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('templates/header', $data);
+            $this->load->view('templates/header_admin', $data);
             $this->load->view('barang/ubah');
-            $this->load->view('templates/footer');
+            $this->load->view('templates/footer_admin');
         } else {
             $config['upload_path'] = './assets/img/';
             $config['allowed_types'] = 'jpg|png|jpeg|gif';
