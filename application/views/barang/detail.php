@@ -14,6 +14,7 @@
                     <p class="card-text"><?= $barang['stok_barang']; ?></p>
                     <p class="card-text"><?= $barang['harga_barang']; ?></p>
                     <p class="card-text"><?= $barang['deskripsi']; ?></p>
+                    <p class="card-text"><?= $barang['spesifikasi']; ?></p>
                     <a href="<?= base_url(); ?>barang" class="btn btn-primary">Kembali</a>
                 </div>
             </div>
