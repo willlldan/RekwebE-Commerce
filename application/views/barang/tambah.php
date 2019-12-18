@@ -32,6 +32,11 @@
                             <input type="text" class="form-control" id="deskripsi" name="deskripsi">
                             <small class="form-text text-danger"><?= form_error('deskripsi'); ?></small>
                         </div>
+                        <div class="form-group">
+                            <label for="spesifikasi">Spesifikasi</label>
+                            <input type="text" class="form-control" id="spesifikasi" name="spesifikasi">
+                            <small class="form-text text-danger"><?= form_error('spesifikasi'); ?></small>
+                        </div>
                         <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
                     </form>
                 </div>

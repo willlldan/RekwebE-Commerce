@@ -29,13 +29,14 @@ class Barang extends CI_Controller
         $this->form_validation->set_rules('stok_barang', 'Stok barang', 'required|numeric');
         $this->form_validation->set_rules('harga_barang', 'Harga barang', 'required|numeric');
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
+        $this->form_validation->set_rules('spesifikasi', 'Spesifikasi', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('templates/header_admin', $data);
             $this->load->view('barang/tambah');
             $this->load->view('templates/footer_admin');
         } else {
-            $config['upload_path'] = './assets/img/';
+            $config['upload_path'] = './assets/images/';
             $config['allowed_types'] = 'jpg|png|jpeg|gif';
             $config['max_size'] = '2048';  //2MB max
             $config['max_width'] = '4480'; // pixel
@@ -79,6 +80,7 @@ class Barang extends CI_Controller
         $this->form_validation->set_rules('stok_barang', 'Stok barang', 'required|numeric');
         $this->form_validation->set_rules('harga_barang', 'Harga barang', 'required|numeric');
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
+        $this->form_validation->set_rules('spesifikasi', 'Spesifikasi', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('templates/header_admin', $data);
