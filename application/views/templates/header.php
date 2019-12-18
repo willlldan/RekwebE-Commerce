@@ -43,13 +43,8 @@
           <h4><i class="far fa-user-circle"></i></h4>
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a href="#modalLogin" class="dropdown-item" data-toggle="modal">Login</a>
+          <a href="<?= base_url('auth/index'); ?>" class="dropdown-item" >Login</a>
         </div>
       </div>
     </div>
   </nav>
-
-
-
-
-
