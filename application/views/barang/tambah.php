@@ -29,12 +29,12 @@
                         </div>
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi</label>
-                            <input type="text" class="form-control" id="deskripsi" name="deskripsi">
+                            <textarea type="text" class="form-control" id="deskripsi" name="deskripsi"></textarea>
                             <small class="form-text text-danger"><?= form_error('deskripsi'); ?></small>
                         </div>
                         <div class="form-group">
                             <label for="spesifikasi">Spesifikasi</label>
-                            <input type="text" class="form-control" id="spesifikasi" name="spesifikasi">
+                            <textarea type="text" class="form-control" id="spesifikasi" name="spesifikasi"></textarea>
                             <small class="form-text text-danger"><?= form_error('spesifikasi'); ?></small>
                         </div>
                         <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>

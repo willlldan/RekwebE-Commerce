@@ -38,7 +38,7 @@ class Barang extends CI_Controller
         } else {
             $config['upload_path'] = './assets/images/';
             $config['allowed_types'] = 'jpg|png|jpeg|gif';
-            $config['max_size'] = '3048';  //2MB max
+            $config['max_size'] = '3048';  //3MB max
             $config['max_width'] = '4480'; // pixel
             $config['max_height'] = '4480'; // pixel
             $config['file_name'] = $_FILES['gambar']['name'];
@@ -89,7 +89,7 @@ class Barang extends CI_Controller
         } else {
             $config['upload_path'] = './assets/img/';
             $config['allowed_types'] = 'jpg|png|jpeg|gif';
-            $config['max_size'] = '3048';  //2MB max
+            $config['max_size'] = '3048';  //3MB max
             $config['max_width'] = '4480'; // pixel
             $config['max_height'] = '4480'; // pixel
             $config['file_name'] = $_FILES['gambar']['name'];
