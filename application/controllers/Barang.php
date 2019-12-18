@@ -38,7 +38,7 @@ class Barang extends CI_Controller
         } else {
             $config['upload_path'] = './assets/images/';
             $config['allowed_types'] = 'jpg|png|jpeg|gif';
-            $config['max_size'] = '2048';  //2MB max
+            $config['max_size'] = '3048';  //2MB max
             $config['max_width'] = '4480'; // pixel
             $config['max_height'] = '4480'; // pixel
             $config['file_name'] = $_FILES['gambar']['name'];
@@ -55,12 +55,12 @@ class Barang extends CI_Controller
         }
     }
 
-    public function hapus($id_barang)
-    {
-        $this->Barang_model->hapusDataBarang($id_barang);
-        $this->session->set_flashdata('flash', 'Dihapus');
-        redirect('barang');
-    }
+    // public function hapus($id_barang)
+    // {
+    //     $this->Barang_model->hapusDataBarang($id_barang);
+    //     $this->session->set_flashdata('flash', 'Dihapus');
+    //     redirect('barang');
+    // }
 
     public function detail($id_barang)
     {
@@ -89,7 +89,7 @@ class Barang extends CI_Controller
         } else {
             $config['upload_path'] = './assets/img/';
             $config['allowed_types'] = 'jpg|png|jpeg|gif';
-            $config['max_size'] = '2048';  //2MB max
+            $config['max_size'] = '3048';  //2MB max
             $config['max_width'] = '4480'; // pixel
             $config['max_height'] = '4480'; // pixel
             $config['file_name'] = $_FILES['gambar']['name'];
