@@ -44,41 +44,41 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h5 class="modal-title  w-100 font-weight-bold" id="exampleModalLabel" >Form Login</h5>
+        <h5 class="modal-title  w-100 font-weight-bold" id="exampleModalLabel">Form Login</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <form class="user">
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small">
-                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">Remember Me</label>
-                      </div>
-                    </div>
-                    <a href="" class="btn btn-primary btn-user btn-block">
-                      Login
-                    </a>
-          </form>
-      </div>        
-      <div class="modal-footer"> 
+          <div class="form-group">
+            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <div class="custom-control custom-checkbox small">
+              <input type="checkbox" class="custom-control-input" id="customCheck">
+              <label class="custom-control-label" for="customCheck">Remember Me</label>
+            </div>
+          </div>
+          <a href="" class="btn btn-primary btn-user btn-block">
+            Login
+          </a>
+        </form>
+      </div>
+      <div class="modal-footer">
         <div class="text-center">
-           <a class="small" href="forgot-password.html">Forgot Password?</a>
+          <a class="small" href="forgot-password.html">Forgot Password?</a>
         </div>
         <div class="text-center">
           <a href="#modalRegister" class="small" data-toggle="modal">Create an Account!</a>
-        </div> 
-      </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
 <!-- end modal pop up -->
 
 <!-- modal pop up register -->
@@ -86,42 +86,42 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h5 class="modal-title  w-100 font-weight-bold" id="exampleModalLabel" >Form Register</h5>
+        <h5 class="modal-title  w-100 font-weight-bold" id="exampleModalLabel">Form Register</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <form class="user">
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
-                  </div>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                  </div>
-                  <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
-                  </div>
-                </div>
-              </form>
-      </div>        
-      <div class="modal-footer"> 
-         <a href="login.html" class="btn btn-primary btn-user btn-block">
-                  Register Account
-        </a>
+          <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+            </div>
+            <div class="col-sm-6">
+              <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+            </div>
+          </div>
+        </form>
       </div>
+      <div class="modal-footer">
+        <a href="login.html" class="btn btn-primary btn-user btn-block">
+          Register Account
+        </a>
       </div>
     </div>
   </div>
+</div>
 <!--  end modal pop up register -->
 
 <!-- Marketing Best Saller -->
@@ -180,45 +180,45 @@
 
 <!-- Tampilan Daftar Barang -->
 <div class="container">
-<div class="row row-cols-1 row-cols-md-3">
-  <a href="" class="col mb-4">
-    <div class="card h-100">
-      <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  <div class="row row-cols-1 row-cols-md-3">
+    <a href="" class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="" class="col mb-4">
-    <div class="card h-100">
-      <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a short card.</p>
+    <a href="" class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a short card.</p>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="" class="col mb-4">
-    <div class="card h-100">
-      <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+    <a href="" class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="" class="col mb-4">
-    <div class="card h-100">
-      <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <a href="" class="col mb-4">
+      <div class="card h-100">
+        <img src="assets/images/Karambit-Gamma-Doppler.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
       </div>
-    </div>
-  </a>
-</div>
+    </a>
+  </div>
 </div>
