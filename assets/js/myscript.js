@@ -1,16 +1,15 @@
-$(document).ready(function(){
-    $('.autoplay').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-    });
+$(document).ready(function () {
+  $('.autoplay').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
 });
-
 
 // Quantity Box
 jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
-jQuery('.quantity').each(function() {
+jQuery('.quantity').each(function () {
   var spinner = jQuery(this),
     input = spinner.find('input[type="number"]'),
     btnUp = spinner.find('.quantity-up'),
@@ -18,7 +17,7 @@ jQuery('.quantity').each(function() {
     min = input.attr('min'),
     max = input.attr('max');
 
-  btnUp.click(function() {
+  btnUp.click(function () {
     var oldValue = parseFloat(input.val());
     if (oldValue >= max) {
       var newVal = oldValue;
@@ -29,7 +28,7 @@ jQuery('.quantity').each(function() {
     spinner.find("input").trigger("change");
   });
 
-  btnDown.click(function() {
+  btnDown.click(function () {
     var oldValue = parseFloat(input.val());
     if (oldValue <= min) {
       var newVal = oldValue;
