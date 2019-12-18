@@ -15,8 +15,8 @@
                             <small class="form-text text-danger"><?= form_error('nama_barang'); ?></small>
                         </div>
                         <div class="form-group">
-                            <label for="gambar">Gambar</label>
-                            <img src="<?= base_url('assets/img/') ?><?= $barang['gambar'] ?>">
+                            <label for="gambar">Gambar</label><br>
+                            <img src="<?= base_url('assets/images/') ?><?= $barang['gambar'] ?>">
                             <input type="file" id="gambar" name="gambar">
                         </div>
                         <div class="form-group">
@@ -33,6 +33,11 @@
                             <label for="deskripsi">Deskripsi</label>
                             <input type="text" class="form-control" id="deskripsi" name="deskripsi" value="<?= $barang['deskripsi']; ?>">
                             <small class="form-text text-danger"><?= form_error('deskripsi'); ?></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="spesifikasi">Spesifikasi</label>
+                            <input type="text" class="form-control" id="spesifikasi" name="spesifikasi" value="<?= $barang['spesifikasi']; ?>">
+                            <small class="form-text text-danger"><?= form_error('spesifikasi'); ?></small>
                         </div>
                         <button type="submit" name="ubah" class="btn btn-primary float-right">Ubah Data</button>
                     </form>
