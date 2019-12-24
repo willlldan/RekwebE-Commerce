@@ -6,6 +6,22 @@ class Barang_model extends CI_model
     {
         return $this->db->get('barang')->result_array();
     }
+
+    public function getBarang($limit, $start, $keyword = null)
+    {
+        if ($keyword) {
+            $this->db->like('nama_barang', $keyword);
+            $this->db->or_like('stok_barang', $keyword);
+            $this->db->or_like('harga_barang', $keyword);
+        }
+        return $this->db->get('barang', $limit, $start)->result_array();
+    }
+
+    public function countAllBarang()
+    {
+        return $this->db->get('barang')->num_rows();
+    }
+
     public function tambahDataBarang($foto)
     {
         $data = [

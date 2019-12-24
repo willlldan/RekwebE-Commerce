@@ -7,6 +7,7 @@ class Barang extends CI_Controller
         parent::__construct();
         $this->load->model('Barang_model');
         $this->load->library('upload');
+        $this->load->library('pagination');
         $this->load->library('form_validation');
     }
     public function index()
@@ -14,8 +15,28 @@ class Barang extends CI_Controller
         $data['judul'] = 'Daftar Barang';
         $data['barang'] = $this->Barang_model->getAllBarang();
         if ($this->input->post('keyword')) {
-            $data['barang'] = $this->Barang_model->cariDataBarang();
+            // $data['barang'] = $this->Barang_model->cariDataBarang();
+            $data['keyword'] = $this->input->post('keyword');
+            $this->session->set_userdata('keyword', $data['keyword']);
+        } else {
+            $data['keyword'] = $this->session->userdata('keyword');
         }
+
+        // config
+        $this->db->like('nama_barang', $data['keyword']);
+        $this->db->or_like('stok_barang', $data['keyword']);
+        $this->db->or_like('harga_barang', $data['keyword']);
+        $this->db->from('barang');
+        $config['total_rows'] = $this->db->count_all_results();
+        $data['total_rows'] = $config['total_rows'];
+        $config['per_pages'] = 8;
+
+        // initialize
+        $this->pagination->initialize($config);
+
+        $data['start'] = $this->uri->segment(3);
+        $data['barang'] = $this->Barang_model->getBarang($config['per_pages'], $data['start'], $data['keyword']);
+
         $this->load->view('templates/header_admin', $data);
         $this->load->view('barang/index', $data);
         $this->load->view('templates/footer_admin');
