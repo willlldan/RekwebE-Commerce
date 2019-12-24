@@ -5,7 +5,7 @@ class Barang extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Barang_model');
+        $this->load->model('Barang_model', 'barang');
         $this->load->library('upload');
         $this->load->library('pagination');
         $this->load->library('form_validation');
@@ -13,8 +13,8 @@ class Barang extends CI_Controller
     public function index()
     {
         $data['judul'] = 'Daftar Barang';
-        $data['barang'] = $this->Barang_model->getAllBarang();
-        if ($this->input->post('keyword')) {
+
+        if ($this->input->post('submit')) {
             // $data['barang'] = $this->Barang_model->cariDataBarang();
             $data['keyword'] = $this->input->post('keyword');
             $this->session->set_userdata('keyword', $data['keyword']);
@@ -31,11 +31,12 @@ class Barang extends CI_Controller
         $data['total_rows'] = $config['total_rows'];
         $config['per_pages'] = 8;
 
+
         // initialize
         $this->pagination->initialize($config);
 
         $data['start'] = $this->uri->segment(3);
-        $data['barang'] = $this->Barang_model->getBarang($config['per_pages'], $data['start'], $data['keyword']);
+        $data['barang'] = $this->barang->getBarang($config['per_pages'], $data['start'], $data['keyword']);
 
         $this->load->view('templates/header_admin', $data);
         $this->load->view('barang/index', $data);
