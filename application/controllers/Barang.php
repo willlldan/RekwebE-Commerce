@@ -26,8 +26,6 @@ class Barang extends CI_Controller
         $data['judul'] = 'Form Tambah Data Barang';
 
         $this->form_validation->set_rules('nama_barang', 'Nama', 'required');
-        $this->form_validation->set_rules('stok_barang', 'Stok barang', 'required|numeric');
-        $this->form_validation->set_rules('harga_barang', 'Harga barang', 'required|numeric');
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
         $this->form_validation->set_rules('spesifikasi', 'Spesifikasi', 'required');
 
@@ -77,17 +75,15 @@ class Barang extends CI_Controller
         $data['barang'] = $this->Barang_model->getBarangById($id_barang);
 
         $this->form_validation->set_rules('nama_barang', 'Nama', 'required');
-        $this->form_validation->set_rules('stok_barang', 'Stok barang', 'required|numeric');
-        $this->form_validation->set_rules('harga_barang', 'Harga barang', 'required|numeric');
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
         $this->form_validation->set_rules('spesifikasi', 'Spesifikasi', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('templates/header_admin', $data);
-            $this->load->view('barang/ubah');
+            $this->load->view('barang/ubah', $data);
             $this->load->view('templates/footer_admin');
         } else {
-            $config['upload_path'] = './assets/img/';
+            $config['upload_path'] = './assets/images/';
             $config['allowed_types'] = 'jpg|png|jpeg|gif';
             $config['max_size'] = '3048';  //3MB max
             $config['max_width'] = '4480'; // pixel

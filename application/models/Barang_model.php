@@ -33,6 +33,7 @@ class Barang_model extends CI_model
     public function ubahDataBarang($foto)
     {
         $data = [
+            "id_barang" => $this->input->post('id_barang', true),
             "nama_barang" => $this->input->post('nama_barang', true),
             "gambar"  => $foto['file_name'],
             "stok_barang" => $this->input->post('stok_barang', true),
