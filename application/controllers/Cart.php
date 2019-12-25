@@ -20,14 +20,11 @@ class Cart extends CI_Controller
         // $this->load->library("cart");
         $data = array(
             'id' => $this->input->post('id_barang'),
-            'nama' => $this->input->post('nama_barang'),
-            'harga' => $this->input->post('harga_barang'),
+            'name' => $this->input->post('nama_barang'),
+            'price' => $this->input->post('harga_barang'),
             'qty' => $this->input->post('quantity'),
         );
-        var_dump($data);
-        echo "<br>";
-        var_dump($this->cart->insert($data));
-        die;
+        
         $this->cart->insert($data);
         echo $this->show_cart();
     }
@@ -40,10 +37,9 @@ class Cart extends CI_Controller
                 $no++;
                 $output .='
                     <tr>
-                        <td>'.$items['nama'].'</td>
-                        <td>'.number_format($items['harga']).'</td>
+                        <td>'.$items['name'].'</td>
+                        <td>'.number_format($items['price']).'</td>
                         <td>'.$items['qty'].'</td>
-                        <td>'.$items['gambar'].'</td>
                         <td>'.number_format($items['subtotal']).'</td>
                         <td><button type="button" id="'.$items['rowid'].'" class="hapus_cart btn btn-danger btn-xs">Batal</button></td>
                     </tr>
