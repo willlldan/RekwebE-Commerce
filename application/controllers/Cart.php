@@ -1,44 +1,39 @@
 <?php
-class Home extends CI_Controller
+class Cart extends CI_Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->model('Home_model');
-    }
+    
+    function __construct(){
+		parent::__construct();
+		$this->load->model('cart_model');
+	}
 
     public function index($nama = '')
     {
-        $data['judul'] = 'Home';
-        $data['nama'] = $nama;
-        $data['barang'] = $this->Home_model->getAllBarang();
-        $this->load->view('templates/header', $data);
-        $this->load->view('home/index', $data);
-        $this->load->view('templates/footer');
-    }
-
-    public function detail($id)
-    {
+        $data['data']=$this->cart_model->get_all_produk();
         $data['judul'] = 'Detail Barang';
-        $data['data'] = $this->Home_model->getBarangById($id);
+        $data['nama'] = $nama;
         $this->load->view('templates/header', $data);
-        $this->load->view('home/detail', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('chart/chart', $data);
     }
 
     function add_to_cart(){
+        // $this->load->library("cart");
         $data = array(
             'id' => $this->input->post('id_barang'),
             'nama' => $this->input->post('nama_barang'),
             'harga' => $this->input->post('harga_barang'),
             'qty' => $this->input->post('quantity'),
-            'gambar' => $this->input->post('gambar'),
         );
+        var_dump($data);
+        echo "<br>";
+        var_dump($this->cart->insert($data));
+        die;
         $this->cart->insert($data);
         echo $this->show_cart();
     }
 
         function show_cart(){ //Fungsi untuk menampilkan Cart
+            $this->load->library("cart");
             $output = '';
             $no = 0;
             foreach ($this->cart->contents() as $items) {
@@ -75,4 +70,7 @@ class Home extends CI_Controller
             $this->cart->update($data);
             echo $this->show_cart();
         }
+
+
 }
+?>
