@@ -15,35 +15,9 @@
         <th scope="col">Aksi</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td><img src="<?= base_url(); ?>assets/images/Karambit-Gamma-Doppler.jpg" alt="..." width="100px" class="rounded"></td>
-        <td>Kopi Kapal Api</td>
-        <td>Rp. 3000</td>
-        <td>2</td>
-        <td><button type="button" class="btn btn-danger">Hapus</button></td>
-      </tr>
-      <tr>
-        <td><img src="<?= base_url(); ?>assets/images/Karambit-Gamma-Doppler.jpg" alt="..." width="100px" class="rounded"></td>
-        <td>Kopi Kapal Api</td>
-        <td>Rp. 3000</td>
-        <td>2</td>
-        <td><button type="button" class="btn btn-danger">Hapus</button></td>
-      </tr>
-      <tr>
-        <td><img src="<?= base_url(); ?>assets/images/Karambit-Gamma-Doppler.jpg" alt="..." width="100px" class="rounded"></td>
-        <td>Kopi Kapal Api</td>
-        <td>Rp. 3000</td>
-        <td>2</td>
-        <td><button type="button" class="btn btn-danger">Hapus</button></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><strong>Jumlah</strong></td>
-        <td>Rp. 9000</td>
-        <td></td>
-        <td><a class="btn btn-success " href="<?= base_url(); ?>checkout">Checkout</a></td>
-      </tr>
-    </tbody>
+    <tbody id="detail_cart">
+</tbody>
+
+    <td><a class="btn btn-success " href="<?= base_url(); ?>checkout">Checkout</a></td>
   </table>
 </div>
