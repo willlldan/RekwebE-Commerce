@@ -5,7 +5,7 @@ class Barang extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Barang_model', 'barang');
+        $this->load->model('Barang_model');
         $this->load->library('upload');
         $this->load->library('pagination');
         $this->load->library('form_validation');
@@ -36,7 +36,7 @@ class Barang extends CI_Controller
         $this->pagination->initialize($config);
 
         $data['start'] = $this->uri->segment(3);
-        $data['barang'] = $this->barang->getBarang($config['per_pages'], $data['start'], $data['keyword']);
+        $data['barang'] = $this->Barang_model->getBarang($config['per_pages'], $data['start'], $data['keyword']);
 
         $this->load->view('templates/header_admin', $data);
         $this->load->view('barang/index', $data);
@@ -116,7 +116,14 @@ class Barang extends CI_Controller
 
                 if ($this->upload->do_upload('gambar')) {
                     $foto = $this->upload->data();
+                    $data = array(
+                        'gambar'        => $foto['file_name'],
+                    );
+                    @unlink($path . $this->input->post('filelama'));
+
                     $this->Barang_model->ubahDataBarang($foto);
+                } else {
+                    echo $this->upload->display_errors();
                 }
             }
             $this->session->set_flashdata('flash', 'Diubah');
