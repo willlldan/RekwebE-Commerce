@@ -59,7 +59,7 @@ class Barang_model extends CI_model
         ];
         $this->db->set($data);
         $this->db->where('id_barang', $this->input->post('id_barang'));
-        $this->db->update('barang', $data);
+        $this->db->update('barang');
     }
 
     public function cariDataBarang()

@@ -60,7 +60,7 @@
                             <th><?= ++$start; ?></th>
                             <td><?= $brg['nama_barang']; ?></td>
                             <td>Tersisa <?= $brg['stok_barang']; ?> buah</td>
-                            <td>Rp. <?= $brg['harga_barang']; ?></td>
+                            <td>Rp. <?= number_format($brg['harga_barang']); ?></td>
                             <td>
                                 <a href="<?= base_url(); ?>barang/detail/<?= $brg['id_barang']; ?>" class="badge badge-primary ">detail</a>
                                 <a href="<?= base_url(); ?>barang/ubah/<?= $brg['id_barang']; ?>" class="badge badge-success ">ubah</a>
