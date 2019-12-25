@@ -14,6 +14,7 @@ class Cart extends CI_Controller
         $data['nama'] = $nama;
         $this->load->view('templates/header', $data);
         $this->load->view('chart/chart', $data);
+        
     }
 
     function add_to_cart(){

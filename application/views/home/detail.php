@@ -66,10 +66,7 @@
 			var harga_barang = $(this).data("produkharga");
 			var quantity     = $('#' + id_barang).val();
 
-			console.log(id_barang);
-			console.log(nama_barang);
-			console.log(harga_barang);
-			console.log(quantity);
+			
 			$.ajax({
 				url : "<?php echo base_url();?>cart/add_to_cart",
 				method : "POST",
@@ -96,4 +93,4 @@
 			});
 		});
 	});
-</script>
+</script> 
