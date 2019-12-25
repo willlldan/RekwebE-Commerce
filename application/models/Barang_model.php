@@ -57,7 +57,7 @@ class Barang_model extends CI_model
             "deskripsi" => $this->input->post('deskripsi', true),
             "spesifikasi" => $this->input->post('spesifikasi', true)
         ];
-
+        $this->db->set($data);
         $this->db->where('id_barang', $this->input->post('id_barang'));
         $this->db->update('barang', $data);
     }
